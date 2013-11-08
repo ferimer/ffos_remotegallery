@@ -1,0 +1,19 @@
+{
+  "name": "RemoteGallery",
+  "description": "A remote photo gallery client",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Fernando Rodríguez Sela - Ferimer, Servicios informaticos",
+    "url": "https://github.com/ferimer/remote_gallery"
+  },
+  "locales": {
+    "en-US": {
+      "name": "RemoteGallery",
+      "description": "A remote photo gallery client"
+    },
+    "es-ES": {
+      "name": "Galería remota",
+      "description": "Visor de fotos para galerías remotas"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+[submodule "contrib/buildingblocks"]
+	path = contrib/buildingblocks
+	url = https://github.com/buildingfirefoxos/Building-Blocks.git
+[submodule "libs/gallery3.js"]
+	path = libs/gallery3.js
+	url = https://github.com/ferimer/gallery3.js.git
