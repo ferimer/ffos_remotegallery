@@ -31,6 +31,17 @@ section.content {
 #about_page {
   text-align: center;
 }
+#about_page button {
+  margin-top: 10px;
+}
+#ferimer_logo {
+  margin: 50px auto 0 auto;
+}
+#ferimer_logo img {
+  display: block;
+  margin: 10px auto 0 auto;
+  width: 50%;
+}
 
 #license_page > pre {
   width: 90%;
@@ -38,3 +49,4 @@ section.content {
   overflow: auto;
   text-align: justify;
 }
+
