@@ -21,7 +21,7 @@ function remotegallery() {
 
 remotegallery.prototype = {
   init: function init() {
-    this.mainTitle = document.getElementById('main_title');
+    this.mainTitle = document.getElementById('page_title');
     this.pages = document.getElementsByClassName('page');
     this.showPage('home_page');
 
@@ -33,6 +33,7 @@ remotegallery.prototype = {
     });
   },
 
+  // Pages management
   hidePages: function hidePages() {
     for (var i=0; i<this.pages.length; i++) {
       this.pages[i].classList.remove('visible');
@@ -44,6 +45,11 @@ remotegallery.prototype = {
     this.mainTitle.textContent =
       this.pages[pageid].getElementsByTagName('title')[0].textContent;
     this.pages[pageid].classList.add('visible');
+  },
+
+  // Accounts setup
+  addAccount: function addAccount() {
+    this.showPage('config_page');
   }
 }
 

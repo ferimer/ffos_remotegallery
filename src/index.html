@@ -37,7 +37,7 @@
           </ul>
           <h2>Tools</h2>
           <ul>
-            <li><a href="#content">Add new account</a></li>
+            <li><a href="#content" onclick="rg_kernel.addAccount()">Add new account</a></li>
             <li><a href="#content" onclick="rg_kernel.showPage('about_page')">About</a></li>
           </ul>
         </nav>
@@ -46,19 +46,29 @@
         <header>
           <a href="#content"><span class="icon icon-menu">hide sidebar</span></a>
           <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
-          <h1 id="main_title">Remote Gallery</h1>
+          <h1>Remote Gallery <em id="page_title"></em></h1>
         </header>
         <section class="content scrollable">
-          <article id="home_page" class="page">
-            <title>Remote Gallery - Home page</title>
+          <article id="home_page" class="page nophoto">
+            <title>Home</title>
             home
           </article>
-          <article id="about_page" class="page">
-            <title>Remote Gallery - About page</title>
+          <article id="about_page" class="page nophoto">
+            <title>About</title>
             <h1>Remote Gallery V.<span id="about_version"></span></h1>
+            <button onclick="rg_kernel.showPage('license_page')">License</button>
+          </article>
+          <article id="license_page" class="page nophoto">
+            <title>License</title>
+            <h1>License</h1>
             <pre id="license"></pre>
           </article>
+          <article id="config_page" class="page nophoto">
+            <title>Config</title>
+            config
+          </article>
 
+          <!-- Gallery photos navigation -->
           <article id="album_page" class="page">
           </article>
           <article id="photo_page" class="page">
@@ -66,9 +76,6 @@
           </article>
           <article id="movie_page" class="page">
             movie
-          </article>
-          <article id="config_page" class="page">
-            config
           </article>
         </section>
       </section>

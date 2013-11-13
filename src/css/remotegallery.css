@@ -5,6 +5,9 @@
  * Fernando Rodríguez Sela <fernando@ferimer.es>
  */
 
+h1 {
+  margin: 10px 0;
+}
 
 #index {
   height: 100%;
@@ -16,4 +19,22 @@
 
 .page.visible {
   display: block;
+}
+
+section.content {
+  padding: 0 !important;
+}
+.nophoto {
+  padding: 0px 3rem 1.5rem;
+}
+
+#about_page {
+  text-align: center;
+}
+
+#license_page > pre {
+  width: 90%;
+  margin: 0 auto;
+  overflow: auto;
+  text-align: justify;
 }
