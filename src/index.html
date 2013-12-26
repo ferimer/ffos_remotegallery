@@ -17,10 +17,16 @@
     <link href="css/buildingblocks/style/buttons.css" rel="stylesheet" type="text/css">
     <link href="css/buildingblocks/style/headers.css" rel="stylesheet" type="text/css">
     <link href="css/buildingblocks/style_unstable/drawer.css" rel="stylesheet" type="text/css">
+    <link href="css/buildingblocks/style_unstable/value_selector.css" rel="stylesheet" type="text/css">
+    <script defer src="css/buildingblocks/js/action_menu.js"></script>
     <!-- End BB -->
     <link href="css/remotegallery.css" rel="stylesheet" type="text/css">
-    <script defer src="js/g3client.js"></script>
+    <script defer src="js/utils.js"></script>
+    <script defer src="js/rg_providers.js"></script>
+    <script defer src="js/provider_gallery.js"></script>
+    <script defer src="js/rg_accounts.js"></script>
     <script defer src="js/remotegallery.js"></script>
+    <script defer src="js/g3client.js"></script>
   </head>
 
   <body bgcolor="#FFFFFF" role="application">
@@ -30,9 +36,10 @@
           <menu type="toolbar">
             <a href="#content"><span class="icon icon-add">add</span></a>
           </menu>
-          <h1>Accounts <em>(*)</em></h1>
+          <h1>Main menu</h1>
         </header>
         <nav>
+          <h2>Accounts</h2>
           <ul id="configured_accounts">
           </ul>
           <h2>Tools</h2>
@@ -49,9 +56,28 @@
           <h1>Remote Gallery <em id="page_title"></em></h1>
         </header>
         <section class="content scrollable">
+          <article id="loading_page" class="page nophoto">
+            <title>Loading...</title>
+            <p>
+              Connecting to your gallery and loading content.
+            </p>
+            <p>
+              Please, be patient and wait ...
+            </p>
+          </article>
           <article id="home_page" class="page nophoto">
             <title>Home</title>
-            home
+            <p>
+              Remote gallery allows you to browse your photo collection in an
+              easy way from your smartphone.
+            </p>
+            <p>
+              Use the main menu (upper-left button) to configure your account
+              or load saved ones.
+            </p>
+            <p>
+              Enjoy !
+            </p>
           </article>
           <article id="about_page" class="page nophoto">
             <title>About</title>
@@ -71,7 +97,31 @@
           </article>
           <article id="config_page" class="page nophoto">
             <title>Config</title>
-            config
+            <section>
+              <header>
+                <h2>Select account type</h2>
+              </header>
+              <form role="dialog" onsubmit="return false">
+                <select id="config_accounttype">
+                  <option value="Gallery3">Gallery 3</option>
+                </select>
+                <div>
+                  <label for="config_accountname">Account name</label>
+                  <input type="config_accountname" name="config_accountname" id="config_accountname" />
+                </div>
+                <div id="config_account">
+                  <div>
+                    <label for="url">Gallery URL</label>
+                    <input type="url" name="url" id="url" />
+                  </div>
+                  <div>
+                    <label for="key">Gallery REST key</label>
+                    <input type="key" name="key" id="key" />
+                  </div>
+                </div>
+                <button id="config_save">Save</button>
+              </form>
+            </section>
           </article>
 
           <!-- Gallery photos navigation -->
